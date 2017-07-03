@@ -1,0 +1,5 @@
+name = Csas quick form
+description = Csas quick form
+package = Csas
+core = 7.x
+configure = admin/config/content/csas_qf

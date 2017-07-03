@@ -1,0 +1,10 @@
+.sty-form-error:before {
+    content: "Надо заполнить!";
+    position: absolute;
+    right: 0;
+    color: red;
+}
+
+.sty-form-error input {
+    background-color: #ffd8ec;
+}
