@@ -5,6 +5,8 @@
  */
 
 function csas_qf_form($form, &$form_state) {
+  global $language;
+  $ru = $language->language == 'ru';
   $css_m_file = _csas_qf_get_css_m_file('csas_qf.css');
   $form['#attached']['js'][] = drupal_get_path('module', 'csas_qf') . '/js/csas_qf.js';
   $form['#attached']['css'][] = $css_m_file;
@@ -17,14 +19,14 @@ function csas_qf_form($form, &$form_state) {
 
   $form['pne'] = array(
     '#type' => 'textfield',
-    '#title' => t('Phone'),
+    '#title' => $ru ? t('Телефон') : t('Phone'),
     '#required' => TRUE,
     '#attributes' => array('class' => array('csas-phn-msk'))
   );
 
   $form['submit'] = array(
     '#type' => 'submit',
-    '#value' => t('Submit'),
+    '#value' => $ru ? t('Отправить') : t('Submit'),
   );
   return $form;
 }
