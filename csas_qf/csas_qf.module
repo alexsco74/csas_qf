@@ -13,7 +13,7 @@ function csas_qf_form($form, &$form_state) {
   $form['#attributes']['class'] = 'css-qf-frm';
   $form['nme'] = array(
     '#type' => 'textfield',
-    '#title' => t('Name'),
+    '#title' => $ru ? t('Имя') : t('Name'),
     '#required' => TRUE,
   );
 
